@@ -22,7 +22,7 @@ Alternately, clone the repository and manually invoke `composer` using the shipp
 `composer.phar`:
 
     cd my/project/dir
-    git clone git://github.com/zendframework/ZendSkeletonApplication.git
+    git clone https://github.com/erolyapici/ZendSkeletonApplication
     cd ZendSkeletonApplication
     php composer.phar self-update
     php composer.phar install
@@ -34,7 +34,7 @@ Another alternative for downloading the project is to grab it via `curl`, and
 then pass it to `tar`:
 
     cd my/project/dir
-    curl -#L https://github.com/zendframework/ZendSkeletonApplication/tarball/master | tar xz --strip-components=1
+    curl -#L https://github.com/erolyapici/ZendSkeletonApplication/tarball/master | tar xz --strip-components=1
 
 You would then invoke `composer` to install dependencies per the previous
 example.
@@ -43,7 +43,7 @@ Using Git submodules
 --------------------
 Alternatively, you can install using native git submodules:
 
-    git clone git://github.com/zendframework/ZendSkeletonApplication.git --recursive
+    git clone git://github.com/erolyapici/ZendSkeletonApplication.git --recursive
 
 Web Server Setup
 ----------------
