@@ -1,0 +1,29 @@
+<?php
+$title = 'Add new album';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+
+<form method="post" action="<?php echo $this->url('album',array('action'=>'edit','id'=>$data->id));?>">
+    <input type="hidden" name="id"  id="id" value="<?php echo $data->id;?>">
+
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" name="title" id="title" placeholder="Title" value="<?php echo $data->title;?>">
+        <?php
+        if($isPost) {
+            echo $this->formElementErrors($form->get('title'));
+        }?>
+    </div>
+    <div class="form-group">
+        <label for="artist">Artist</label>
+        <input type="text" class="form-control" name="artist" id="artist" placeholder="Artist" value="<?php echo $data->artist;?>">
+        <?php
+        if($isPost) {
+            echo $this->formElementErrors($form->get('artist'));
+        }
+        ?>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+
+</form>
